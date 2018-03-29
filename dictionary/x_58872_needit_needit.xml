@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="4" type="collection">
+        <element default="Assigned For" label="Assigned for" max_length="250" name="assigned_for" type="string"/>
+        <element label="Completed time" max_length="40" name="u_completed_time" type="glide_date_time"/>
+        <element label="Requested fir" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="humar resources" label="Request Type" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Humar Resources" sequence="0" value="humar resources"/>
+                <element label="Facilities" sequence="1" value="facilities"/>
+                <element label="Legal" sequence="2" value="legal"/>
+                <element label="Network" sequence="3" value="network"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="humar resources 1" label="What needed" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="Humar Resources 1" sequence="0" value="humar resources 1"/>
+                <element label="Human Resources 2" sequence="1" value="human resources 2"/>
+                <element label="Facilites 1" sequence="2" value="facilites 1"/>
+                <element label="Facilities 2" sequence="3" value="facilities 2"/>
+            </choice>
+        </element>
+    </element>
+</database>
